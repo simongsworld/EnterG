@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Picture Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #slider {
+            width: 80%;
+            max-width: 600px;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        #slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        #controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px; /* 버튼과 슬라이더 간의 간격 조정 */
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px; /* 버튼 간의 간격 조정 */
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 반응형 디자인을 위한 추가 스타일 */
+        @media (max-width: 600px) {
+            button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="slider">
+            <div id="slides">
+                <div class="slide"><img src="https://via.placeholder.com/600x400?text=Page+1" alt="Page 1"></div>
+                <div class="slide"><img src="https://via.placeholder.com/600x400?text=Page+2" alt="Page 2"></div>
+                <div class="slide"><img src="https://via.placeholder.com/600x400?text=Page+3" alt="Page 3"></div>
+                <div class="slide"><img src="https://via.placeholder.com/600x400?text=Page+4" alt="Page 4"></div>
+            </div>
+        </div>
+        <div id="controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.getElementById('slides');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const totalSlides = document.querySelectorAll('.slide').length;
+        let currentIndex = 0;
+
+        function updateSlider() {
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        });
+    </script>
+</body>
+</html>
