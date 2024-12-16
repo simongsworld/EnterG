@@ -73,19 +73,19 @@ Slider
   background-repeat: no-repeat;
 }
 .cd-slider li:first-of-type .image {
-  background-image: url(../img/interior1.webp);
+  background-image: url(interior1.webp);
 }
 .cd-slider li:nth-of-type(2) .image {
-  background-image: url(../img/interior2.webp);
+  background-image: url(interior2.webp);
 }
 .cd-slider li:nth-of-type(3) .image {
-  background-image: url(../img/interior3.webp);
+  background-image: url(interior3.webp);
 }
 .cd-slider li:nth-of-type(4) .image {
-  background-image: url(../img/interior4.webp);
+  background-image: url(interior4.webp);
 }
 .cd-slider li:nth-of-type(5) .image {
-  background-image: url(../img/interior5.webp);
+  background-image: url(interior5.webp);
 }
 .cd-slider .image {
   background-size: cover;
