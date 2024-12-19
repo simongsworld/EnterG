@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus��">
+  <meta name="Generator" content="EditPlus�">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
@@ -13,18 +13,18 @@
  <div>
   <div style="width: 100%; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px; position: relative;">
     <div class="accordion">
-      <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">�޴� 1</div>
+      <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">메뉴 1</div>
       <div class="accordion-content" style="display: none; padding: 15px; border-top: 1px solid #ddd; position: relative; background: white; z-index: 1;">
         <img src="https://via.placeholder.com/150" alt="Example Image" style="max-width: 100%; height: auto; margin-bottom: 10px;">
-        <p style="margin: 0;">�޴� 1�� �����Դϴ�. ���⿡ ���ϴ� �ؽ�Ʈ�� ���� �� �ֽ��ϴ�.</p>
+        <p style="margin: 0;">메뉴 1의 내용입니다. 여기에 원하는 텍스트를 넣을 수 있습니다.</p>
       </div>
     </div>
 
     <div class="accordion">
-      <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">�޴� 2</div>
+      <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">메뉴 2</div>
       <div class="accordion-content" style="display: none; padding: 15px; border-top: 1px solid #ddd; position: relative; background: white; z-index: 1;">
         <img src="https://via.placeholder.com/150" alt="Example Image" style="max-width: 100%; height: auto; margin-bottom: 10px;">
-        <p style="margin: 0;">�޴� 2�� �����Դϴ�. ���⿡ ���ϴ� �ؽ�Ʈ�� ���� �� �ֽ��ϴ�.</p>
+        <p style="margin: 0;">메뉴 2의 내용입니다. 여기에 원하는 텍스트를 넣을 수 있습니다.</p>
       </div>
     </div>
   </div>
@@ -34,14 +34,14 @@
       header.addEventListener('click', () => {
         const content = header.nextElementSibling;
 
-        // �ٸ� �����ִ� ��Ӵٿ� �ݱ�
+        // 다른 열려있는 드롭다운 닫기
         document.querySelectorAll('.accordion-content').forEach(item => {
           if (item !== content) {
             item.style.display = 'none';
           }
         });
 
-        // ���� Ŭ���� ��Ӵٿ� ���
+        // 현재 클릭한 드롭다운 토글
         content.style.display = (content.style.display === 'block') ? 'none' : 'block';
       });
     });
