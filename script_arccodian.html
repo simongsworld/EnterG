@@ -1,41 +1,51 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HTML5 기본 템플릿">
-  <meta name="author" content="Simongsworld">
-  <meta name="keywords" content="HTML, Template, HTML5">
-  <title>   </title>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus��">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
 
-</head>
+ </head>
+ <body>
+ <div>
+  <div style="width: 100%; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px; position: relative;">
+    <div class="accordion">
+      <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">�޴� 1</div>
+      <div class="accordion-content" style="display: none; padding: 15px; border-top: 1px solid #ddd; position: relative; background: white; z-index: 1;">
+        <img src="https://via.placeholder.com/150" alt="Example Image" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+        <p style="margin: 0;">�޴� 1�� �����Դϴ�. ���⿡ ���ϴ� �ؽ�Ʈ�� ���� �� �ֽ��ϴ�.</p>
+      </div>
+    </div>
 
-<body>
-<div>
-<div style="width: 100%; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; margin-bottom: 10px;">
-<div class="accordion">
-<div class="accordion-header" style="background-color: #f5f5f5; padding: 15px; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">메뉴 1</div>
-<div class="accordion-content" style="display: none; padding: 15px; border-top: 1px solid #ddd;"><img style="max-width: 100%; height: auto; margin-bottom: 10px;" src="https://via.placeholder.com/150" alt="Example Image" />
-<p style="margin: 0;" data-ke-size="size16">메뉴 1의 내용입니다. 여기에 원하는 텍스트를 넣을 수 있습니다.메뉴 1의 내용입니다. 여기에 원하는 텍스트를 넣을 수 있습니다.메뉴 1의 내용입니다. 여기에 원하는 텍스트를 넣을 수 있습니다.메뉴 1의 내용입니다. 여기에 원하는 텍스트를 넣을 수 있습니다.메뉴 1의 내용입니다. 여기에 원하는 텍스트를 넣을 수 있습니다.메뉴 1의 내용입니다. 여기에 원하는 텍스트를 넣을 수 있습니다.</p>
-</div>
-</div>
-</div>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.accordion-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const content = header.nextElementSibling;
+    <div class="accordion">
+      <div class="accordion-header" style="background-color: #f5f5f5; padding: 15px; cursor: pointer; font-weight: bold; border-bottom: 1px solid #ddd;">�޴� 2</div>
+      <div class="accordion-content" style="display: none; padding: 15px; border-top: 1px solid #ddd; position: relative; background: white; z-index: 1;">
+        <img src="https://via.placeholder.com/150" alt="Example Image" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+        <p style="margin: 0;">�޴� 2�� �����Դϴ�. ���⿡ ���ϴ� �ؽ�Ʈ�� ���� �� �ֽ��ϴ�.</p>
+      </div>
+    </div>
+  </div>
 
-      if (content.style.display === 'block') {
-        content.style.display = 'none';
-      } else {
-        content.style.display = 'block';
-      }
+    <script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+
+        // �ٸ� �����ִ� ��Ӵٿ� �ݱ�
+        document.querySelectorAll('.accordion-content').forEach(item => {
+          if (item !== content) {
+            item.style.display = 'none';
+          }
+        });
+
+        // ���� Ŭ���� ��Ӵٿ� ���
+        content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+      });
     });
-  });
-});
-</script>
- 
-</body>
+  </script>
+</div>
+ </body>
 </html>
