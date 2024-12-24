@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 크리스마스 카드</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .background-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100vw;
+            min-height: 100vh;
+            object-fit: cover;
+        }
+
+        .content-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+		.content-contain {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
+            margin: 20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+        }
+
+        .card-title {
+            font-size: 5em;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff0000, #008000, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            font-family: 'Gill Sans', sans-serif;
+            margin: 0;
+        }
+
+		 .carden {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 25px;
+            margin: 20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+        }
+
+        .carden-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            background: black;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            font-family: 'Gill Sans', sans-serif;
+            margin: 0;
+        }
+
+		.cardeny-title {
+            font-size: 5em;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff0000, #008000, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            font-family: 'Gill Sans', sans-serif;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                padding: 15px;
+            }
+
+            .card-title {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-title {
+                font-size: 1.5em;
+            }
+
+            .card {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-video">
+        <video autoplay="autoplay" loop="loop" muted>
+            <source src="https://simongsworld.github.io/EnterG/snow.mp4" type="video/mp4" />
+            브라우저에서 동영상을 지원하지 않습니다.
+        </video>
+    </div>
+    <div class="content-container">
+        <div class="card">
+            <span class="card-title">크리스마스</span>
+        </div>
+    </div>
+	 <div class="content-contain">
+	 <div class="carden">
+            <span class="carden-title">
+			안녕 나의 사랑 경해. <br />
+			Happy Merry Christmas.<br />
+			어느덧 우리가 함께한지도 328일째 되는 날이네.<br />
+			5월 내 생일 이후 우리가 만나지 못하고 있지만<br />
+			각자의 삶에 충실하다 한번 또 만나면 반갑고<br />
+			서로가 최고인듯한 하루가 될 수 있으리라 생각함.<br />
+			올 겨울은 추위와 더위가 극과 극으로 다르게 <br />
+			매일이 뒤바뀜에 연속이지만 우리의 마음은<br />
+			굳게 시간이 지나도 성장하리라 믿어.<br /><br />
+
+			올 크리스마스는 함께 하겠구나 처음에 했던 생각과<br />
+			다르게 올해도 서로 각자의 시간을 보내겠지만<br />
+			각자의 자리에서 일상을 보내는 마음속에서<br />
+			서로의 생각이 조금이나마 들어차 있다면<br />
+			괜찮다고 생각해~<br /><br />
+
+			추위는 곧 떠나가고 따뜻함이 찾아오듯이<br />
+			우리에게도 곧 따스함이 올거라 생각해~<br /><br />
+
+			크리스마스 잘 보내고, 다음 만남때까지 현재도<br />
+			많이 사랑합니다.<br /><br /><br />
+			</span>
+
+			<span class="cardeny-title">
+            Merry Christmas.
+			</span>
+        </div>
+	</div>
+</body>
+</html>
