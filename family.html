@@ -29,7 +29,7 @@
             position: relative;
             width: 100%;
             height: calc(100vh - 200px);
-            overflow: hidden;
+			overflow: hidden;
         }
 
         .background-video-container video {
@@ -44,18 +44,19 @@
 
         /* Letterbox overlay */
         .letterbox {
-            position: relative;
-            top: 50%;
+            position: fixed;
+            top: 52%;
             left: 50%;
+			display:block;
             transform: translate(-50%, -50%);
             z-index: 2;
             background: rgba(255, 255, 255, 0.8);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            max-width: 700px;
+            max-width: 900px;
             width: 80%;
-            height: 700px;
+            height: 500px;
         }
 
         .letterbox .textbox {
@@ -71,10 +72,10 @@
 		
 		ul.textbox li {
 			list-style-type:none;
-			float:left;
 			padding-right:50px;
+			line-height:1.5em;
 		}
-				
+		
 		span.blur {
 			color:#ff00ff;
 		}
@@ -113,25 +114,23 @@
         </video>
         <div class="letterbox">
 				<ul class="textbox">
-					<li><p><b><span class="bloom">2024년</span></b> 한해 동안 수고 많으셨어요.</p></li>
+					<li><b><span class="bloom">2024년</span></b> 한해 동안 수고 많으셨어요.</li><br>
 					
-					<li><p>아버지는 자주 못뵙지만 어머니가 잘 챙겨 드리리라 생각에 걱정이 없어요.</p></li>
-					<li><p>생업에 너무 열심히시라 매번 받는 만큼 돌려드리지 못함이 안타까울 뿐이네요.</p></li>
+					<li>아버지는 자주 못뵙지만 어머니가 잘 챙겨 드리리라 생각에 걱정이 없어요.</li>
+					<li>생업에 너무 열심히시라 매번 받는 만큼 돌려드리지 못함이 안타까울 뿐이네요.</li><br>
 					
-					<li><p>어머니는 <b><span class="red">사고</span></b>도 겪으시고, 전보단 나이드셨다고 말씀 많이 하지만</p></li>
-					<li><p>여전히 제가 보기엔 한창이신거 같아요. </p></li>
+					<li>어머니는 <b><span class="red">사고</span></b>도 겪으시고, 전보단 나이드셨다고 말씀 많이 하지만</li>
+					<li>여전히 제가 보기엔 한창이신거 같아요. </li><br>
 					
-					<li><p><b><span class="bail">2025년은 바라던일 다 이루시고, 화이팅 넘치는</span></b>새해를 맞이했으면 해요.</p></li>
+					<li><b><span class="bail">2025년은 바라던일 다 이루시고, 화이팅 넘치는</span></b>새해를 맞이했으면 해요.</li><br>
 					
-					<li><p><b><span class="bloom">2024년</span></b> 마지막인 오늘 마무리 잘 하시고, 
-					내일부턴 새롭게 다시 출발하자구요.</p></li>
+					<li><b><span class="bloom">2024년</span></b> 마지막인 오늘 마무리 잘 하시고, 
+					내일부턴 새롭게 다시 출발하자구요.</li><br>
 					
-					<li><p>내년에도 올해처럼 여전히 잘 부탁드려요.</p></li>
-					<li><p>아버지, 어머니 사랑합니다.<b><span class="heart">♡</span></b></p></li>
+					<li>내년에도 올해처럼 여전히 잘 부탁드려요.</li>
+					<li>아버지, 어머니 사랑합니다.<b><span class="heart">♡</span></b></li><br>
 					
-					<li><p><b><span class="blur">Happy New Years 2025</span></b></p></li>
-					
-					<li><p></p></li>
+					<li><b><span class="blur">Happy New Years 2025</span></b></li><br>
 				</ul>
         </div>
     </div>
