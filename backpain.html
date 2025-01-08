@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back Pain Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background: #f9f9f9;">
+    <h2 style="color: #2c3e50; text-align: center;">등 통증 유형별 발생 비율</h2>
+	<canvas id="backPainChart" style="max-width: 800px; max-height: 800px; margin: auto;"></canvas>
+
+    <script>
+        const ctx = document.getElementById('backPainChart').getContext('2d');
+        const backPainChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['상부 등 통증', '중부 등 통증', '하부 등 통증'],
+                datasets: [{
+                    label: '발생 비율 (%)',
+                    data: [35, 25, 40],
+                    backgroundColor: ['skyblue', 'orange', 'green'],
+                    borderColor: ['blue', 'darkorange', 'darkgreen'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            font: {
+                                size: 20
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: '통증 유형',
+                            font: {
+                                size: 20
+                            }
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 50,
+                        title: {
+                            display: true,
+                            text: '',
+                            font: {
+                                size: 15
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
