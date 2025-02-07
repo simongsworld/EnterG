@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>차트</title>
+ </head>
+ <body>
+  <!-- Chart.js 라이브러리 추가 -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- 차트를 표시할 캔버스 -->
+<canvas id="eyeDiseaseChart" width="400" height="200"></canvas>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var ctx = document.getElementById('eyeDiseaseChart').getContext('2d');
+
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["10대", "20대", "30대", "40대", "50대", "60대 이상"],
+            datasets: [
+                {
+                    label: "근시",
+                    data: [60, 50, 40, 20, 10, 5],
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)'
+                },
+                {
+                    label: "원시",
+                    data: [5, 5, 10, 15, 30, 50],
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)'
+                },
+                {
+                    label: "난시",
+                    data: [20, 25, 30, 35, 40, 45],
+                    backgroundColor: 'rgba(255, 206, 86, 0.5)'
+                },
+                {
+                    label: "안구건조증",
+                    data: [10, 15, 20, 30, 40, 50],
+                    backgroundColor: 'rgba(75, 192, 192, 0.5)'
+                },
+                {
+                    label: "백내장",
+                    data: [0, 0, 5, 15, 40, 70],
+                    backgroundColor: 'rgba(153, 102, 255, 0.5)'
+                },
+                {
+                    label: "녹내장",
+                    data: [0, 0, 2, 5, 10, 20],
+                    backgroundColor: 'rgba(255, 159, 64, 0.5)'
+                },
+                {
+                    label: "황반변성",
+                    data: [0, 0, 2, 10, 30, 50],
+                    backgroundColor: 'rgba(199, 199, 199, 0.5)'
+                },
+                {
+                    label: "당뇨망막병증",
+                    data: [0, 0, 5, 10, 20, 40],
+                    backgroundColor: 'rgba(83, 102, 255, 0.5)'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    title: {
+                        display: true,
+                        text: '유병률 (%)'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: '연령대'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top'
+                }
+            }
+        }
+    });
+});
+</script>
+
+ </body>
+</html>
